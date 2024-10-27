@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/helloFragment">
+
+    <fragment
+        android:id="@+id/helloFragment"
+        android:name="com.example.psychotest.view.fragments.HelloFragment"
+        android:label="Hello Fragment"
+        tools:layout="@layout/fragment_hello">
+        <action
+            android:id="@+id/action_helloFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.psychotest.view.fragments.MenuFragment"
+        android:label="Menu Fragment"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menuFragment_to_testingFragment"
+            app:destination="@id/testingFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_helloFragment"
+            app:destination="@id/helloFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/testingFragment"
+        android:name="com.example.psychotest.view.fragments.TestingFragment"
+        android:label="fragment_testing"
+        tools:layout="@layout/fragment_testing">
+        <action
+            android:id="@+id/action_testingFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.psychotest.view.fragments.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+</navigation>

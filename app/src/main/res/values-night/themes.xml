@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.PsychoTest" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Установите цвета ripple и основного фона кнопок -->
+        <item name="colorControlHighlight">@color/ripple_color</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+    </style>
+
+    <style name="Theme.PsychoTest" parent="Base.Theme.PsychoTest" />
+</resources>
